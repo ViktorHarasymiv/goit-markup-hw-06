@@ -34,6 +34,12 @@
                     <li><a href="" class="nav_link link">Portfolio</a></li>
                     <li><a href="" class="nav_link link">Contacts</a></li>
                 </ul>
+                <button onclick="openPhoneMenu()" type="button" class="open-menu_button">
+                    <svg width="17" height="15">
+                        <use href="./images/icons.svg#icon-menu-burger">
+                        </use>
+                    </svg>
+                </button>
             </nav>
             <address class="address__nav_wrapper">
                 <ul class="header__adress_list">
@@ -541,6 +547,74 @@
                     <span class="button_fixed_text_style">SEND</span>
                 </button>
             </form>
+        </div>
+    </div>
+
+    <!-- M E N U  B U R G E R  -->
+
+    <div class="phone_menu_section">
+        <div class="menu_block">
+            <header class="header_phone_menu">
+                <button onclick="closePhoneMenu()" type="button" class="close_modal">
+                    <svg class="svg_close_icon" width="8" height="8">
+                        <use href="./images/icons.svg#icon-closeIco">
+                        </use>
+                    </svg>
+                </button>
+                <nav class="nav_phone-menu">
+                    <ul class="nav_phone-menu_list">
+                        <li class="nav_phone-menu_link"><a href="./index.html" class="is-active">Studio</a>
+                        </li>
+                        <li class="nav_phone-menu_link"><a href="#">Portfolio</a></li>
+                        <li class="nav_phone-menu_link"><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="footer_menu_block">
+                <address class="phone_address__nav_wrapper">
+                    <ul class="header__adress_list">
+                        <li><a href="mailto:info@devstudio.com" class="adress_link link">info@devstudio.com</a></li>
+                        <li><a href="tel:+110001111111" class="adress_link link">+11 (000) 111-11-11</a></li>
+                    </ul>
+                </address>
+                <div class="phone-menu_social_block">
+                    <p class="soc_title">Social media</p>
+                    <ul class="phone-menu_soc_list">
+                        <li class="social_link">
+                            <a href="#" class="media_link footer_media_link">
+                                <svg class="social_icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-Instagram">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social_link">
+                            <a href="#" class="media_link footer_media_link">
+                                <svg class="social_icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-FB">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social_link">
+                            <a href="#" class="media_link footer_media_link">
+                                <svg class="social_icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-Twiter">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social_link">
+                            <a href="#" class="media_link footer_media_link">
+                                <svg class="social_icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-LinkID">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </body>
