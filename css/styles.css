@@ -179,8 +179,6 @@ a {
 .logo {
     display: inline-block;
 
-    margin-right: 76px;
-
     color: var(--iris);
 
 }
@@ -191,7 +189,6 @@ a {
 
 .header__nav_list {
     display: flex;
-    gap: 40px;
 }
 
 .nav_link {
@@ -234,10 +231,6 @@ a {
     opacity: 1;
 }
 
-.link {
-    padding: 24px 0;
-}
-
 .nav_link:hover,
 .nav_link:focus {
     color: var(--ocean);
@@ -270,12 +263,9 @@ address {
 /*  H E R O  S E C T I O N  */
 
 .hero_section {
-    margin: 0 auto;
-    padding: 188px 0;
-
     max-width: 1440px;
+    margin: 0 auto;
 
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center
@@ -285,15 +275,10 @@ address {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    gap: 48px;
 }
 
 .general_title {
-    max-width: 496px;
-
     font-weight: 700;
-    font-size: 56px;
     letter-spacing: 0.02em;
     line-height: 107%;
     color: #ffffff;
@@ -324,8 +309,6 @@ address {
 }
 
 .benefits_card {
-    width: calc((100% - 12px) / 4);
-
     display: flex;
     flex-direction: column;
 }
@@ -563,10 +546,6 @@ address {
 
 .footer_media_link:focus {
     background-color: #31d0aa;
-}
-
-.social_block {
-    margin-right: 80px;
 }
 
 .soc_title {
@@ -883,7 +862,7 @@ address {
 
 /*  320PX  */
 
-@media(max-width:767px) {
+@media(min-width:320px) {
 
     .container {
         padding: 0 16px;
@@ -903,17 +882,21 @@ address {
         padding: 16px 0px;
 
         width: 100%;
-
         justify-content: space-between;
     }
 
     .hero_section {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background.phone.jpg);
         padding: 72px 52px;
+
+    }
+
+    .hero_wrapper {
+        margin: 0 auto;
+        max-width: 216px;
     }
 
     .general_title {
-        max-width: 216px;
 
         font-size: 36px;
         line-height: 111%;
@@ -936,7 +919,7 @@ address {
 
     .benefits_card,
     .portfolio_link {
-        width: calc(100% / 1);
+        max-width: 288px;
     }
 
     .icon_background {
@@ -960,9 +943,12 @@ address {
         gap: 48px;
     }
 
-    .logo_block,
     .social_block {
         margin-right: 0;
+    }
+
+    .logo_block {
+        margin-right: 24px;
     }
 
     .logo_footer,
@@ -1003,13 +989,18 @@ address {
         width: 100%;
     }
 
-    .link {
-        padding: 0;
+    .open-menu_button {
+        display: block;
+    }
+
+    .close_menu {
+        display: block;
     }
 
     /*  M O D A L   M E N U  */
 
     .phone_menu_section {
+        display: block;
         position: fixed;
         top: 0;
 
@@ -1081,13 +1072,211 @@ address {
         align-items: center;
         gap: 40px;
     }
-}
 
+}
 
 /*  768PX  */
 
-@media (min-width:768px) {}
+@media (min-width:768px) {
+
+    .header_nav {
+        padding: 0;
+        justify-content: start;
+    }
+
+    .link {
+        padding: 24px 0;
+    }
+
+    .header__nav_list,
+    .address__nav_wrapper {
+        display: flex;
+    }
+
+    .header__nav_list {
+        gap: 40px;
+    }
+
+    .logo {
+        margin-right: 120px;
+    }
+
+    .header__adress_list {
+        padding: 16px 0px;
+
+        justify-content: end;
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+
+    .header__adress_list .link {
+        padding: 0;
+    }
+
+    .header__adress_list li {
+        display: inline-block;
+        line-height: 117%;
+        text-align: right;
+    }
+
+    .header__adress_list li a {
+        font-size: 12px;
+    }
+
+    .hero_section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background.tablet.jpg);
+        padding: 112px 15px;
+    }
+
+    .hero_wrapper {
+        max-width: 496px;
+        gap: 36px;
+    }
+
+    .general_title {
+        font-size: 56px;
+    }
+
+    .our_team_list {
+        flex-wrap: wrap;
+
+        gap: 64px 24px;
+
+        justify-content: center;
+    }
+
+    .benefits_card_list {
+        column-gap: 24px;
+    }
+
+    .benefits_card {
+        max-width: 356px;
+    }
+
+    .people_card {
+        width: 264px;
+    }
+
+    .open-menu_button {
+        display: none;
+    }
+
+    .close_menu {
+        display: none;
+    }
+
+    .phone_menu_section {
+        display: none;
+    }
+
+    .portfolio_list {
+        gap: 24px;
+    }
+
+    .portfolio_link {
+        max-width: 356px;
+    }
+
+    .footer_body {
+        margin: 0 auto;
+    }
+
+    .footer_section {}
+
+    .footer_form {
+        width: 496px;
+    }
+
+    .form_block {
+        width: 408px;
+    }
+
+    .footer_form {
+        justify-content: space-around;
+        align-items: start;
+    }
+}
 
 /*  1158PX  */
 
-@media(min-width:1158px) {}
+@media(min-width:1158px) {
+    .header_nav {
+        width: auto;
+    }
+
+    .logo {
+        margin-right: 76px;
+    }
+
+    .header__adress_list {
+        padding: 24px 0px;
+
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .header__adress_list li {
+        text-align: left;
+    }
+
+    .hero_section {
+        padding: 188px 0;
+
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/background.jpg);
+    }
+
+    .hero_wrapper {
+        gap: 48px;
+    }
+
+    .icon_background {
+        display: flex;
+    }
+
+    .card_title {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .benefits_card_list {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    .benefits_card {
+        max-width: 264px;
+    }
+
+    .people_card {
+        max-width: 264px;
+    }
+
+    .our_team_list {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .portfolio_link {
+        width: calc(100% - 15px) / 3;
+    }
+
+    .portfolio_list {
+        justify-content: space-between;
+    }
+
+    .logo_block {
+        margin-right: 120px;
+    }
+
+    .social_block {
+        margin-right: 80px;
+    }
+
+    .footer_form {
+        width: auto;
+    }
+
+}
