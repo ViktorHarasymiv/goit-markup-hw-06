@@ -343,6 +343,8 @@ address {
 .our_team_wrapper {
     display: flex;
     flex-direction: column;
+
+    align-items: center;
 }
 
 .our_team_list {
@@ -363,7 +365,7 @@ address {
     justify-content: center;
     align-items: center;
 
-    width: calc((100% - 12px) / 4);
+    flex-basis: calc((100% - 12px) / 4);
 
     background: var(--white);
 
@@ -517,9 +519,6 @@ address {
 }
 
 .logo_footer {
-    display: inline-block;
-
-    margin-bottom: 16px;
     color: var(--iris);
 }
 
@@ -864,10 +863,6 @@ address {
 
 @media(min-width:320px) {
 
-    .container {
-        padding: 0 16px;
-    }
-
     .section,
     .footer_body {
         padding: 96px 0;
@@ -910,11 +905,11 @@ address {
 
     .benefits_card_list,
     .our_team_list,
-    .portfolio_list,
     .footer_section {
+        flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 72px 0;
+        gap: 72px 24px;
     }
 
     .benefits_card,
@@ -931,19 +926,17 @@ address {
         font-size: 36px;
     }
 
-    .our_team_wrapper {
-        padding: 0 28px;
-    }
-
     .people_card {
-        width: calc(100% / 1);
+        flex-basis: 264px;
     }
 
     .portfolio_list {
-        gap: 48px;
+        justify-content: center;
+        row-gap: 48px;
     }
 
     .social_block {
+        width: 100%;
         margin-right: 0;
     }
 
@@ -955,6 +948,11 @@ address {
     .social_block {
         display: flex;
         justify-content: center;
+        align-items: center;
+    }
+
+    .logo_footer {
+        margin-bottom: 16px;
     }
 
     .social_block {
@@ -969,16 +967,30 @@ address {
         display: flex;
         flex-direction: column;
         justify-content: center;
+
     }
 
     .subscribe_form {
         justify-content: center;
     }
 
+    .footer_label {
+        display: flex;
+        justify-content: center;
+        flex-basis: 100%;
+    }
+
+    .subscribe_input {
+        align-items: center;
+        justify-content: center;
+    }
+
     .form_block {
         padding: 72px 16px 24px;
-        width: 288px;
+
     }
+
+    .subscribe_button {}
 
     .header__adress_list {
         flex-wrap: wrap;
@@ -1072,7 +1084,6 @@ address {
         align-items: center;
         gap: 40px;
     }
-
 }
 
 /*  768PX  */
@@ -1138,11 +1149,13 @@ address {
     }
 
     .our_team_list {
-        flex-wrap: wrap;
+        max-width: 552px;
 
         gap: 64px 24px;
+    }
 
-        justify-content: center;
+    .people_card {
+        flex-basis: calc(100% - 32px) / 2;
     }
 
     .benefits_card_list {
@@ -1151,10 +1164,6 @@ address {
 
     .benefits_card {
         max-width: 356px;
-    }
-
-    .people_card {
-        width: 264px;
     }
 
     .open-menu_button {
@@ -1177,12 +1186,6 @@ address {
         max-width: 356px;
     }
 
-    .footer_body {
-        margin: 0 auto;
-    }
-
-    .footer_section {}
-
     .footer_form {
         width: 496px;
     }
@@ -1191,9 +1194,29 @@ address {
         width: 408px;
     }
 
-    .footer_form {
-        justify-content: space-around;
-        align-items: start;
+    .soc_title {
+        text-align: left;
+    }
+
+    .subscribe_form {
+        justify-content: start;
+    }
+
+    .logo_block {
+        margin-right: 0;
+    }
+
+    .logo_footer {
+        display: inline-block;
+    }
+
+    .social_block {
+        width: auto;
+        align-items: flex-start;
+    }
+
+    .footer_label {
+        flex-basis: 0;
     }
 }
 
@@ -1209,8 +1232,6 @@ address {
     }
 
     .header__adress_list {
-        padding: 24px 0px;
-
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
@@ -1219,6 +1240,10 @@ address {
 
     .header__adress_list li {
         text-align: left;
+    }
+
+    .header__adress_list li a {
+        font-size: 16px;
     }
 
     .hero_section {
@@ -1250,13 +1275,13 @@ address {
         max-width: 264px;
     }
 
-    .people_card {
-        max-width: 264px;
+    .our_team_list {
+        max-width: 100%;
+
     }
 
-    .our_team_list {
-        justify-content: space-between;
-        gap: 0;
+    .people_card {
+        width: calc((100% - 12px) / 4);
     }
 
     .portfolio_link {
@@ -1279,4 +1304,8 @@ address {
         width: auto;
     }
 
+    .footer_section {
+        flex-wrap: nowrap;
+        gap: 0;
+    }
 }
